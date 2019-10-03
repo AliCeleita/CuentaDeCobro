@@ -23,10 +23,16 @@ public class Resultado {
    String[] idioma;
    String ubicacion;
    int dias_trabajados;
+   double valor_cuenta;
     
     public Resultado() {
     }
+    
+    public String definirGenero(){
         
+        return "Señor";
+    }
+    
     public String getNombre() {
         return nombre;
     }
@@ -81,6 +87,14 @@ public class Resultado {
 
     public void setDias_trabajados(int dias_trabajados) {
         this.dias_trabajados = dias_trabajados;
+    }
+
+    public double getValor_cuenta() {
+        return valor_cuenta;
+    }
+
+    public void setValor_cuenta(double valor_cuenta) {
+        this.valor_cuenta = valor_cuenta;
     }
  
     

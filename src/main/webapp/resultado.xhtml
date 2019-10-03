@@ -10,17 +10,24 @@
             <br></br>
             <center><h3><h:outputText value="RESULTADO" /></h3></center>
             <br></br>
-            <h:outputText value="Señor"/>
+            <h:outputText value="#{resultado.definirGenero}"/>
+            <h:outputText value="#{resultado.nombre}"/>
+            <h:outputText value=" #{resultado.apellido}"/>
             <br></br><br></br>
             <h:outputText value="Por su profesión"/>
+            <h:outputText value="#{resultado.profesion}"/>
             <br></br><br></br>
             <h:outputText value="Y sus idiomas "/>
+            <h:outputText value="#{resultado.idioma}"/>
             <br></br><br></br>
             <h:outputText value="Su ubicación en "/>
+            <h:outputText value="#{resultado.ubicacion}"/>
             <br></br><br></br>
             <h:outputText value="Y los días trabajados "/>
+            <h:outputText value="#{resultado.dias_trabajados}"/>
             <br></br><br></br>
             <h:outputText value="Su cuenta es por: $"/>
+            <h:outputText value="#{resultado.valor_cuenta}"/>
         </h:form>
     </h:body>
 </html>
