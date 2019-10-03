@@ -6,6 +6,7 @@
 package com.udec.cuenta_de_cobro.controlador;
 
 import javax.enterprise.context.RequestScoped;
+import javax.inject.Inject;
 import javax.inject.Named;
 
 /**
@@ -16,86 +17,27 @@ import javax.inject.Named;
 @RequestScoped
 public class Resultado {
 
-   String nombre;
-   String apellido;
-   String profesion;
-   String genero;
-   String[] idioma;
-   String ubicacion;
-   int dias_trabajados;
-   double valor_cuenta;
+   @Inject
+   private Datos datos;
     
     public Resultado() {
     }
     
     public String definirGenero(){
-        
-        return "Señor";
-    }
-    
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+        if(datos.getGenero()== "H"){
+            return "Señor";
+        }else if (datos.getGenero()=="M"){
+            return "Señora";
+        }
+        return "";
     }
 
-    public String getApellido() {
-        return apellido;
+    public Datos getDatos() {
+        return datos;
     }
 
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
+    public void setDatos(Datos datos) {
+        this.datos = datos;
     }
-
-    public String getProfesion() {
-        return profesion;
-    }
-
-    public void setProfesion(String profesion) {
-        this.profesion = profesion;
-    }
-
-    public String getGenero() {
-        return genero;
-    }
-
-    public void setGenero(String genero) {
-        this.genero = genero;
-    }
-
-    public String[] getIdioma() {
-        return idioma;
-    }
-
-    public void setIdioma(String[] idioma) {
-        this.idioma = idioma;
-    }
-
-    public String getUbicacion() {
-        return ubicacion;
-    }
-
-    public void setUbicacion(String ubicacion) {
-        this.ubicacion = ubicacion;
-    }
-
-    public int getDias_trabajados() {
-        return dias_trabajados;
-    }
-
-    public void setDias_trabajados(int dias_trabajados) {
-        this.dias_trabajados = dias_trabajados;
-    }
-
-    public double getValor_cuenta() {
-        return valor_cuenta;
-    }
-
-    public void setValor_cuenta(double valor_cuenta) {
-        this.valor_cuenta = valor_cuenta;
-    }
- 
     
 }
