@@ -11,13 +11,13 @@
             <br></br>
             <center><h3><h:outputText value="CUENTA DE COBRO" /></h3></center>
             <h:outputText value="Nombre: " style="margin: 5%"/>
-            <h:inputText value="nombre" />
+            <h:inputText value="#{datos.nombre}" />
             <br></br><br></br>
             <h:outputText value="Apellido: " style="margin: 5%"/>
-            <h:inputText value="apellido" />
+            <h:inputText value="#{datos.apellido}" />
             <br></br><br></br>
             <h:outputText value="Profesión: " style="margin-left: 5%"/>
-            <h:selectOneMenu value="profesion"  style="margin-left: 4.5%">
+            <h:selectOneMenu value="#{datos.profesion}"  style="margin-left: 4.5%">
                 <f:selectItem itemValue="1" itemLabel="Ingeniero" />
                 <f:selectItem itemValue="2" itemLabel="Tegnologo" />
                 <f:selectItem itemValue="3" itemLabel="Tecnico" />
@@ -25,27 +25,28 @@
             </h:selectOneMenu>
             <br></br><br></br>
             <h:outputText value="Género: " style="margin: 5%"/>
-            <h:selectOneRadio value="genero" style="margin-left: 5%">
+            <h:selectOneRadio value="#{datos.genero}" style="margin-left: 5%">
                 <f:selectItem itemValue="H" itemLabel="Hombre" />
                 <f:selectItem itemValue="M" itemLabel="Mujer" />
             </h:selectOneRadio>
             <br></br><br></br>
             <h:outputText value="Idiomas: " style="margin: 5%"/>
-            <h:selectManyCheckbox value="idioma" style="margin-left: 5%">
-                <f:selectItem itemValue="Ingles" itemLabel="Ingles" />
-                <f:selectItem itemValue="Frances" itemLabel="Frances" />
-                <f:selectItem itemValue="Aleman" itemLabel="Aleman" />
+            <h:selectManyCheckbox value="#{datos.idioma}" style="margin-left: 5%">
+                <f:selectItem itemValue="Ingles" itemLabel="Inglés" />
+                <f:selectItem itemValue="Frances" itemLabel="Francés" />
+                <f:selectItem itemValue="Aleman" itemLabel="Alemán" />
             </h:selectManyCheckbox>
             <br></br><br></br>
             <h:outputText value="Ubicación: " style="margin: 5%"/>
-            <h:selectOneRadio value="genero" style="margin-left: 5%">
+            <h:selectOneRadio value="#{datos.ubicacion}" style="margin-left: 5%">
                 <f:selectItem itemValue="I" itemLabel="Facatativá" />
                 <f:selectItem itemValue="O" itemLabel="Afueras" />
             </h:selectOneRadio>
             <br></br><br></br>
-            <h:outputText value="Número de dias trabajados: " style="margin: 5%"/>
+            <h:outputText value="Número de días trabajados: " style="margin: 5%"/>
             <br></br>
-            <h:inputText value="dias" style="margin-left: 5%"/>
+            <h:inputText value="#{datos.dias}" style="margin-left: 5%"/>
+            <h:commandButton value="" action="#{index.irVision}" />
         </h:form>
     </h:body>
 </html>
