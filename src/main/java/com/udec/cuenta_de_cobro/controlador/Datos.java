@@ -74,5 +74,7 @@ public class Datos {
         this.dias = dias;
     }
     
-    
+    public String irResultado(){
+        return "resultado";
+    }
 }

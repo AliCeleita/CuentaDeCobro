@@ -18,10 +18,10 @@
             <br></br><br></br>
             <h:outputText value="Profesión: " style="margin-left: 5%"/>
             <h:selectOneMenu value="#{datos.profesion}"  style="margin-left: 4.5%">
-                <f:selectItem itemValue="1" itemLabel="Ingeniero" />
-                <f:selectItem itemValue="2" itemLabel="Tegnologo" />
-                <f:selectItem itemValue="3" itemLabel="Tecnico" />
-                <f:selectItem itemValue="4" itemLabel="Auxiliar" />
+                <f:selectItem itemValue="200000" itemLabel="Ingeniero" />
+                <f:selectItem itemValue="150000" itemLabel="Tegnologo" />
+                <f:selectItem itemValue="100000" itemLabel="Tecnico" />
+                <f:selectItem itemValue="50000" itemLabel="Auxiliar" />
             </h:selectOneMenu>
             <br></br><br></br>
             <h:outputText value="Género: " style="margin: 5%"/>
@@ -32,21 +32,21 @@
             <br></br><br></br>
             <h:outputText value="Idiomas: " style="margin: 5%"/>
             <h:selectManyCheckbox value="#{datos.idioma}" style="margin-left: 5%">
-                <f:selectItem itemValue="Ingles" itemLabel="Inglés" />
-                <f:selectItem itemValue="Frances" itemLabel="Francés" />
-                <f:selectItem itemValue="Aleman" itemLabel="Alemán" />
+                <f:selectItem itemValue="250000" itemLabel="Inglés" />
+                <f:selectItem itemValue="330000" itemLabel="Francés" />
+                <f:selectItem itemValue="500000" itemLabel="Alemán" />
             </h:selectManyCheckbox>
             <br></br><br></br>
             <h:outputText value="Ubicación: " style="margin: 5%"/>
             <h:selectOneRadio value="#{datos.ubicacion}" style="margin-left: 5%">
-                <f:selectItem itemValue="I" itemLabel="Facatativá" />
-                <f:selectItem itemValue="O" itemLabel="Afueras" />
+                <f:selectItem itemValue="0" itemLabel="Facatativá" />
+                <f:selectItem itemValue="80000" itemLabel="Afueras" />
             </h:selectOneRadio>
             <br></br><br></br>
             <h:outputText value="Número de días trabajados: " style="margin: 5%"/>
             <br></br>
             <h:inputText value="#{datos.dias}" style="margin-left: 5%"/>
-            <h:commandButton value="Generar" action="resultado" />
+            <h:commandButton value="Generar" action="#{datos.irResultado}" />
         </h:form>
     </h:body>
 </html>
