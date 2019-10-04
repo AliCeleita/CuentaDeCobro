@@ -103,6 +103,7 @@ public class Resultado {
             labelidi = "";
         } else {
             labelidi = "Y sus idiomas: ";
+            idioma=log.definirIdioma();
         }
     }
 
